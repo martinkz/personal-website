@@ -177,19 +177,19 @@ html {
   box-sizing: inherit; }
 
 ::-moz-selection {
-  background: #b3d4fc;
+  background: #4C4746;
   text-shadow: none; }
 
 ::selection {
-  background: #b3d4fc;
+  background: #4C4746;
   text-shadow: none; }
 
 html {
   font-size: 62.5%; }
 
 body {
-  font: normal 2rem/1.5 Georgia, serif;
-  background-color: #f5f5f5; }
+  font: 300 2rem/1.5 'Roboto Slab', Georgia, serif;
+  background-color: #e9e7e2; }
 
 /* -----------------------------
 	    FRONTPAGE STYLES
@@ -225,6 +225,31 @@ body {
   letter-spacing: 0.4rem; }
   .main-title__line-2 > sup {
     font-size: 6.4rem; }
+
+.main-section {
+  overflow: auto;
+  background-color: #fa6f68; }
+
+.section-heading {
+  height: 100vh;
+  margin: 0;
+  font: 400 8em/1.2 'Monoton', sans-serif;
+  line-height: 100vh;
+  text-align: center;
+  text-transform: uppercase;
+  color: #a29487; }
+
+.project-heading {
+  margin-bottom: 0;
+  font: 900 3.6em/1.2 'Roboto', sans-serif;
+  text-align: center;
+  color: white; }
+
+.project-desc {
+  font: 300 1.8rem/1.2 'Roboto', sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fab7b3; }
 
 /* ==========================================================================
    Helper classes
