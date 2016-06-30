@@ -1,0 +1,14 @@
+{
+  "name": "martinkz",
+  "version": "1.0.0",
+  "description": "My Personal Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Martin Kozhuharov",
+  "license": "ISC",
+  "devDependencies": {
+  }
+  "comment": "This project uses global node modules"
+}
