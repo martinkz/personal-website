@@ -142,6 +142,9 @@ textarea {
   -webkit-appearance: button;
   font: inherit; }
 
+/* -----------------------------
+		  RESET STYLES
+----------------------------- */
 hr {
   display: block;
   height: 1px;
@@ -150,12 +153,7 @@ hr {
   margin: 1em 0;
   padding: 0; }
 
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
+audio, canvas, iframe, img, svg, video {
   vertical-align: middle; }
 
 fieldset {
@@ -166,6 +164,12 @@ fieldset {
 textarea {
   resize: vertical; }
 
+/* -------------------------------
+	  VARIABLES & SETTINGS
+------------------------------- */
+/* -----------------------------
+		  BASE STYLES
+----------------------------- */
 html {
   box-sizing: border-box; }
 
@@ -184,14 +188,17 @@ html {
   font-size: 62.5%; }
 
 body {
-  font: normal 2rem/1.5 Georgia, serif; }
+  font: normal 2rem/1.5 Georgia, serif;
+  background-color: #f5f5f5; }
 
+/* -----------------------------
+	    FRONTPAGE STYLES
+----------------------------- */
 .main-header {
   position: relative;
   height: 100vh;
-  background: url("bg1.jpg") no-repeat center center;
-  background-size: 100% auto;
-  background-color: #efeee8; }
+  background: #efeee8 url("bg1.jpg") no-repeat center center;
+  background-size: 100% auto; }
 
 .main-title {
   width: auto;
@@ -201,20 +208,23 @@ body {
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   margin: 0;
+  padding: 4.6rem 6rem 4rem;
   font: 400 5.25rem/1.2 'Rye', serif;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   text-align: center;
-  color: #eee;
-  background-color: #2e2d2c;
-  padding: 4rem 6rem; }
+  color: #f5f5f5;
+  background-color: #2e2d2c; }
+
+.main-title__line-1,
+.main-title__line-2 {
+  white-space: nowrap; }
 
 .main-title__line-2 {
-  font-size: 10.9rem; }
-
-.main-title:before {
-  position: absolute;
-  top: -50%; }
+  font-size: 10.4rem;
+  letter-spacing: 0.4rem; }
+  .main-title__line-2 > sup {
+    font-size: 6.4rem; }
 
 /* ==========================================================================
    Helper classes
