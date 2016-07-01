@@ -231,11 +231,6 @@ body {
   .main-title__line-2 > sup {
     font-size: 6.4rem; }
 
-.main-section {
-  overflow: auto;
-  background-color: #fa6f68;
-  color: white; }
-
 .section-heading {
   height: 100vh;
   margin: 0;
@@ -244,7 +239,12 @@ body {
   text-align: center;
   text-transform: uppercase;
   color: #a29487;
-  border: 35px solid #a29487; }
+  background: url("bg-section.jpg") repeat; }
+
+.main-section {
+  overflow: auto;
+  background-color: #fa6f68;
+  color: white; }
 
 .project-heading {
   margin-bottom: 0;
