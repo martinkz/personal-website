@@ -30,7 +30,7 @@ textarea { resize: vertical; }
 	  VARIABLES & SETTINGS
 ------------------------------- */
 
-$content-max-width: 1200px;
+$content-max-width: 1240px;
 
 $color-geraldine: #fa6f68;
 $color-goldenrod: #f7c76a;
@@ -59,6 +59,10 @@ html { font-size: 62.5%; }
 body {
 	font: 300 2rem/1.5 'Roboto Slab', Georgia, serif;
 	background-color: #e9e7e2;
+	// experimental
+	// scroll-snap-points-y: repeat(100%);
+	// scroll-snap-type: mandatory;
+	// scroll-snap-destination: 100% 0%;
 }
 
 /* -----------------------------
@@ -67,6 +71,7 @@ body {
 
 .wrap {
 	max-width: $content-max-width;
+	padding: 20px;
 	margin: 0 auto;
 }
 
@@ -185,19 +190,19 @@ body {
 .facade-minimal
 {
 	position:  relative;
-	margin:  24px auto;
+	margin:  24px 0;
+	padding-top: 55px;
 	box-shadow:  0px 5px 10px rgba(0,0,0,0.1);
 	font-family: sans-serif;
 	color:  #454545;
 	border-radius:  3px;
-	overflow-x:hidden;
-	// display: inline-block;
-	// vertical-align: top;
-}
+	overflow: hidden;
 
-// .facade-minimal + .facade-minimal {
-// 	margin-left: 50px;
-// }
+	& > img {
+		width: auto;
+		max-width: 100%;
+	}
+}
 
 /*
 	INLINE SVG
