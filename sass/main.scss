@@ -226,7 +226,7 @@ a {
 		color: lighten($color-geraldine, 16%);
 	}
 	.main-section__type-2 & {
-		color: darken($color-goldenrod, 35%);
+		color: desaturate(darken($color-goldenrod, 22%), 40%);
 	}
 }
 
