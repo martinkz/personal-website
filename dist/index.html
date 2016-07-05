@@ -20,9 +20,12 @@
         		<span class="main-title__line-1">I will make your website</span><br> 
 				<span class="main-title__line-2">gre<span class="kerningfix1">a</span>t <span class="kerningfix1">a</span><span class="kerningfix2">g</span>ain<sup>*</sup></span>
         	</h1>
+        	<nav class="main-nav">
+        		<a class="nav-link" href="#" data-a11y-dialog-show="contact-dialog">About &amp; Contact</a>
+        	</nav>
         </header>
 
-        <main role="main">
+        <main role="main" id="main">
         	<div class="section-heading-wrapper"><!-- wrapper not used -->
         		<h2 class="section-heading">Work</h2>
         	</div>
@@ -70,8 +73,37 @@
 
         </main>
 
-        <script src="https://code.jquery.com/jquery-1.12.2.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.2.min.js"><\/script>')</script>
+
+		<div class="dialog" aria-hidden="true" id="contact-dialog">
+			<div class="dialog-overlay" tabindex="-1" data-a11y-dialog-hide></div>
+			<div class="dialog-content" aria-labelledby="dialogTitle" aria-describedby="dialogDescription" role="dialog">
+				<div role="document">
+					<h1 id="dialogTitle">About and Contact Info</h1>
+					<p id="dialogDescription">Fill in the ridiculously small ridiculously cool newsletter!</p>
+
+					<button data-a11y-dialog-hide class="dialog-close" title="Close registration form">&times;</button>
+				</div>
+			</div>
+		</div>
+
+<!--         <script src="https://code.jquery.com/jquery-1.12.2.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.2.min.js"><\/script>')</script> -->
+        
+        <script src="a11y-dialog.min.js"></script>
+
+        <script>
+	    (function () {
+	      document.addEventListener('DOMContentLoaded', function () {
+	        var dialogEl = document.getElementById('contact-dialog');
+	        var mainEl = document.getElementById('main');
+	        var dialog = new window.A11yDialog(dialogEl, mainEl);
+
+	        // To manually control the dialog:
+	        // dialog.show()
+	        // dialog.hide()
+	      });
+	    }());
+	    </script>
 
 
         <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID.
