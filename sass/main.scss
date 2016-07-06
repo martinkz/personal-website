@@ -124,19 +124,21 @@ a {
 }
 
 .main-nav {
-	position: absolute;
-	top: 0;
-	right: 2em;
-	background-color: #333;
+	// position: absolute;
+	// top: 0;
+	float: right;
+	// right: 4em;
+	margin-right: 4em;
+	background-color: $color-goldenrod;
 	z-index: 11;
 }
 
 .nav-link {
 	display: inline-block;
 	padding: 0.6em 1.2em;
-	color: white;
+	color: #444;
 	box-shadow: none;
-	font: 300 1.2em 'Roboto Slab', sans-serif;
+	font: 700 1.2em 'Roboto Slab', sans-serif;
 	text-transform: uppercase;
 }
 
@@ -273,6 +275,9 @@ a {
 	margin: 3rem 0 1rem;
 }
 
+/*	Facade - a lightweight browser window mockup
+	based on the sleek design of Jacob SÃ¤wensten ( http://www.jacobsawensten.com/ ) */
+
 .screenshots-wrapper {
 	display: flex;
 	flex-wrap: wrap;
@@ -280,10 +285,6 @@ a {
 	justify-content: space-around;
 }
 
-/*
-	Facade - a lightweight browser window mockup
-	based on the sleek design of Jacob SÃ¤wensten ( http://www.jacobsawensten.com/ )
-*/
 
 .facade-minimal
 {
@@ -347,33 +348,75 @@ a {
 }
 
 
+/* ------ Dialog ------ */
+
 
 .dialog[aria-hidden="true"] {
-  display: none;
+	// display: none;
+	visibility: hidden;
 }
 
 .dialog-overlay {
-  z-index: 2;
-  background-color: rgba(0, 0, 0, 0.66);
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 2;
+	transition: all 0.25s ease-in-out;
 }
 
 .dialog-content {
-  background-color: rgb(255, 255, 255);
-  z-index: 10;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	transform: translateY(-100%);
+	transition: all 0.25s ease-in-out;
+	// transition-delay: 0.2s;
 }
 
+.dialog:not([aria-hidden="true"]) .dialog-content {
+	transform: translateY(0);
+}
+.dialog:not([aria-hidden="true"]) .dialog-overlay {
+	background-color: rgba(0, 0, 0, 0.66);
+}
 
+.dialog-close {
+	position: absolute;
+	top: 50%;
+	right: 50%;
+	transform: translate(50%,-50%);
+	border: none;
+	background: #444;
+	color: white;
+	font-size: 3em;
+	padding: 0.5rem 4rem 1rem;
+	cursor: pointer;
+}
+
+.about-dialog {
+	// padding: 3em 5em;
+	background-color: $color-goldenrod;
+}
+
+.contact-box {
+	// color: white;
+	background-color: $color-geraldine;
+}
+
+.grid-row {
+	clear: both;
+	overflow: auto;
+}
+
+.grid-half {
+	float: left;
+	width: 50%;
+	padding: 3em 10% 4em;
+}
 
 
 /* ==========================================================================
