@@ -191,6 +191,16 @@ html {
 body {
   font: 300 2rem/1.5 'Roboto Slab', Georgia, serif;
   background-color: #e9e7e2; }
+  @media only screen and (max-width: 1050px) {
+    body,
+    .wf-active body,
+    .no-js body {
+      font-size: 1.8em; } }
+  @media only screen and (max-width: 480px) {
+    body,
+    .wf-active body,
+    .no-js body {
+      font-size: 1.6em; } }
 
 a {
   color: inherit;
@@ -209,7 +219,10 @@ a {
   position: relative;
   height: 100vh;
   background: #efeee8 url("bg1.jpg") no-repeat center center;
-  background-size: 100% auto; }
+  background-size: cover; }
+  @media only screen and (max-height: 450px) {
+    .main-header {
+      height: 450px; } }
 
 .main-title {
   width: auto;
@@ -219,8 +232,8 @@ a {
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   margin: 0;
-  padding: 4.6rem 6rem 4rem;
-  font: 400 5.25rem/1.2 'Rye', serif;
+  padding: 4.6rem 6rem 3.8rem;
+  font: 400 2.6em/1.2 'Rye', serif;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   text-align: center;
@@ -230,28 +243,48 @@ a {
   .main-title .main-title__line-2 {
     white-space: nowrap; }
   .main-title .main-title__line-2 {
-    font-size: 10.5rem;
+    font-size: 2em;
     letter-spacing: 0.4rem; }
     .main-title .main-title__line-2 > sup {
-      font-size: 6.4rem; }
+      font-size: 0.6em; }
+  @media only screen and (max-width: 900px) {
+    .main-title {
+      padding: 4% 5.2% 3.2%; }
+      .main-title .main-title__line-1,
+      .main-title .main-title__line-2 {
+        white-space: normal; } }
+  @media only screen and (max-width: 860px) {
+    .main-title {
+      font-size: 2em; } }
+  @media only screen and (max-width: 480px) {
+    .main-title {
+      font-size: 1.6em; } }
   .main-title .kerningfix1 {
-    letter-spacing: -0.3rem; }
+    letter-spacing: -0.03em; }
   .main-title .kerningfix2 {
-    letter-spacing: 0.8rem; }
+    letter-spacing: 0.08em; }
 
 .main-nav {
   float: right;
   margin-right: 4em;
-  background-color: #ffce6f;
   z-index: 11; }
+  @media only screen and (max-width: 860px) {
+    .main-nav {
+      float: none;
+      text-align: center;
+      margin-right: 0; } }
 
 .nav-link {
   display: inline-block;
   padding: 0.6em 1.2em;
   color: #444;
+  background-color: #ffce6f;
   box-shadow: none;
   font: 700 1.2em 'Roboto Slab', sans-serif;
   text-transform: uppercase; }
+
+.nav-link:focus {
+  outline: 1px solid #f3b744; }
 
 .section-heading {
   height: 100vh;
@@ -262,6 +295,9 @@ a {
   text-transform: uppercase;
   color: #a29487;
   background: url("bg-section.jpg") repeat; }
+  @media only screen and (max-width: 860px) {
+    .section-heading {
+      font-size: 18vw; } }
 
 .main-section {
   padding: 3em 0 4em;
@@ -290,7 +326,7 @@ a {
   color: inherit; }
 
 .project-desc {
-  font: 300 1.8rem/1.2 'Roboto', sans-serif;
+  font: 300 0.9em/1.2 'Roboto', sans-serif;
   text-align: center;
   text-transform: uppercase; }
   .main-section__type-1 .project-desc {
@@ -424,6 +460,9 @@ a {
   font-size: 3em;
   padding: 0.5rem 4rem 1rem;
   cursor: pointer; }
+  @media only screen and (max-width: 860px) {
+    .dialog-close {
+      top: auto; } }
 
 .about-dialog {
   background-color: #ffce6f; }
@@ -439,6 +478,15 @@ a {
   float: left;
   width: 50%;
   padding: 3em 10% 4em; }
+  @media only screen and (max-width: 860px) {
+    .grid-half {
+      float: none;
+      width: 100%; }
+      .dialog-close + .grid-half {
+        padding-top: 4em; } }
+
+.u-nowrap {
+  white-space: nowrap; }
 
 /* ==========================================================================
    Helper classes
