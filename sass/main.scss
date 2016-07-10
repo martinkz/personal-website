@@ -38,6 +38,7 @@ $screen-sm: 480px;
 
 $color-geraldine: #fa6f68;
 $color-goldenrod: #ffce6f;
+$color-flint: #84796b;
 
 
 /* -----------------------------
@@ -239,7 +240,6 @@ a {
 .main-section {
 	padding: 3em 0 4em;
 	position: relative;
-	// border-top: 30px solid #ec4343;
 
 	&.main-section__type-1 {
 		background-color: $color-geraldine;
@@ -249,21 +249,33 @@ a {
 		background-color: $color-goldenrod;
 		color: #444;
 	}
+	&.main-section__type-3 {
+		background-color: $color-flint;
+		color: white;
+	}
 
 	@at-root .main-section__type-1 + .curveDown {
 		fill: $color-geraldine;
 		background-color: $color-goldenrod;
 	}
-	@at-root .main-section__type-1 + .curveDown .p1 {
+	@at-root .main-section__type-1 + .curveDown .darkercurve {
 		fill: desaturate(darken($color-geraldine, 9%), 30%);
 	}
 
 	@at-root .main-section__type-2 + .curveDown {
 		fill: $color-goldenrod;
-		background-color: #333;
+		background-color: $color-flint;
 	}
-	@at-root .main-section__type-2 + .curveDown .p1 {
+	@at-root .main-section__type-2 + .curveDown .darkercurve {
 		fill: desaturate(darken($color-goldenrod, 12%), 25%);
+	}
+
+	@at-root .main-section__type-3 + .curveDown {
+		fill: $color-flint;
+		// background-color: #333;
+	}
+	@at-root .main-section__type-3 + .curveDown .darkercurve {
+		fill: desaturate(darken($color-flint, 10%), 5%);
 	}
 }
 
@@ -316,6 +328,9 @@ a {
 	}
 	.main-section__type-2 & {
 		color: desaturate(darken($color-goldenrod, 22%), 40%);
+	}
+	.main-section__type-3 & {
+		color: lighten($color-flint, 25%);
 	}
 }
 
