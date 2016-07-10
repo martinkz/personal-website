@@ -12,6 +12,12 @@
 
         <link href='https://fonts.googleapis.com/css?family=Rye:400|Monoton:400|Roboto+Slab:300,700|Roboto:300,900' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="main.css">
+        <!--[if lte IE 9]>
+        	<script src="classList.js"></script>
+        <![endif]-->
+        <script>
+        	document.getElementsByTagName('html')[0].classList.remove("no-js");
+        </script>
     </head>
     <body>
         
@@ -21,7 +27,7 @@
 				<span class="main-title__line-2">gre<span class="kerningfix1">a</span>t <span class="kerningfix1">a</span><span class="kerningfix2">g</span>ain<sup>*</sup></span>
         	</h1>
         	<nav class="main-nav">
-        		<a class="nav-link" href="#" data-a11y-dialog-show="contact-dialog">About &amp; Contact</a>
+        		<a class="nav-link" id="test" href="#contact-dialog" data-a11y-dialog-show="contact-dialog">About &amp; Contact</a>
         	</nav>
         	<p class="footnote">* pun intended</p>
         </header>
@@ -108,6 +114,14 @@
 	        var dialogEl = document.getElementById('contact-dialog');
 	        var mainEl = document.getElementById('main');
 	        var dialog = new window.A11yDialog(dialogEl, mainEl);
+
+	        var menu_items = document.getElementsByClassName('nav-link');
+	        [].forEach.call(menu_items, function (item) {
+	        	item.addEventListener('click', function(event) {
+					event.preventDefault();
+				});
+	        });
+
 	      });
 	    }());
 	    </script>

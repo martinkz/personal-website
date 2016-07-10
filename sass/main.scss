@@ -424,6 +424,10 @@ a {
 .dialog[aria-hidden="true"] {
 	// display: none;
 	visibility: hidden;
+
+	.no-js & {
+		visibility: visible;
+	}
 }
 
 .dialog-overlay {
@@ -434,6 +438,10 @@ a {
 	right: 0;
 	z-index: 2;
 	transition: all 0.25s ease-in-out;
+
+	.no-js & {
+		display: none;
+	}
 }
 
 .dialog-content {
@@ -445,6 +453,11 @@ a {
 	transform: translateY(-100%);
 	transition: all 0.25s ease-in-out;
 	// transition-delay: 0.2s;
+
+	.no-js & {
+		position: static;
+		transform: translateY(0);
+	}
 }
 
 .dialog:not([aria-hidden="true"]) .dialog-content {
@@ -468,6 +481,10 @@ a {
 
 	@media only screen and (max-width: $screen-md) {
 		top: auto;
+	}
+
+	.no-js & {
+		display: none;
 	}
 }
 

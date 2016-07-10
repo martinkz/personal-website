@@ -435,6 +435,8 @@ a {
 /* ------ Dialog ------ */
 .dialog[aria-hidden="true"] {
   visibility: hidden; }
+  .no-js .dialog[aria-hidden="true"] {
+    visibility: visible; }
 
 .dialog-overlay {
   position: fixed;
@@ -445,6 +447,8 @@ a {
   z-index: 2;
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out; }
+  .no-js .dialog-overlay {
+    display: none; }
 
 .dialog-content {
   position: absolute;
@@ -456,6 +460,10 @@ a {
   transform: translateY(-100%);
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out; }
+  .no-js .dialog-content {
+    position: static;
+    -webkit-transform: translateY(0);
+    transform: translateY(0); }
 
 .dialog:not([aria-hidden="true"]) .dialog-content {
   -webkit-transform: translateY(0);
@@ -479,6 +487,8 @@ a {
   @media only screen and (max-width: 860px) {
     .dialog-close {
       top: auto; } }
+  .no-js .dialog-close {
+    display: none; }
 
 .about-dialog {
   background-color: #ffce6f; }
