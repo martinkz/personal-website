@@ -220,6 +220,12 @@ a {
   height: 100vh;
   background: #efeee8 url("bg-retro.jpg") no-repeat 20% 85%;
   background-size: cover; }
+  @media only screen and (max-width: 1440px) and (max-height: 1080px) {
+    .main-header {
+      background-image: url("bg-retro-w1440-h1080.jpg"); } }
+  @media only screen and (max-width: 960px) and (max-height: 1280px) {
+    .main-header {
+      background-image: url("bg-retro-h1280-w960.jpg"); } }
   @media only screen and (max-height: 450px) {
     .main-header {
       height: 450px; } }

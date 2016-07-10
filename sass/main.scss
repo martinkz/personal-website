@@ -103,9 +103,18 @@ a {
 
 .main-header {
 	position: relative;
+	// Viewport units Chrome bug -- soon to be fixed (behind flag now)
+	// https://bugs.chromium.org/p/chromium/issues/detail?id=428132
 	height: 100vh;
 	background: #efeee8 url('bg-retro.jpg') no-repeat 20% 85%;
 	background-size: cover;
+
+	@media only screen and (max-width: 1440px) and (max-height: 1080px) {
+		background-image: url('bg-retro-w1440-h1080.jpg');
+	}
+	@media only screen and (max-width: 960px) and (max-height: 1280px) {
+		background-image: url('bg-retro-h1280-w960.jpg');
+	}
 
 	@media only screen and (max-height: 450px) {
 		height: 450px;
