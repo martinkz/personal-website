@@ -312,38 +312,6 @@ a {
 	}
 }
 
-
-// .main-section::before,
-// .main-section::after {
-// 	position: absolute;
-// 	content: '';
-// }
-
-// .ss-style-doublediagonal {
-// 	z-index: 1;
-// 	padding-top: 4em;
-// 	background: #2072a7;
-// }
-
-// .ss-style-doublediagonal::before,
-// .ss-style-doublediagonal::after {
-// 	top: 0;
-// 	left: -25%;
-// 	z-index: -1;
-// 	width: 150%;
-// 	height: 75%;
-// 	background: inherit;
-// 	transform: rotate(-2deg);
-// 	transform-origin: 0 0;
-// }
-
-// .ss-style-doublediagonal::before {
-// 	height: 50%;
-// 	background: #116094;
-// 	transform: rotate(-3deg);
-// 	transform-origin: 3% 0;
-// }
-
 .project-heading {
 	margin: 0;
 	font: bold 3.4em/1.2 Tahoma, Geneva, Arial, sans-serif;
