@@ -189,16 +189,19 @@ html {
   font-size: 62.5%; }
 
 body {
-  font: 300 2rem/1.5 'Roboto Slab', Georgia, serif;
+  font: normal 2rem/1.5 Georgia, serif;
   background-color: #e9e7e2; }
+  .wf-robotoslab-n3-active body,
+  .no-js body {
+    font: 300 2rem/1.5 'Roboto Slab', Georgia, serif; }
   @media only screen and (max-width: 1050px) {
     body,
-    .wf-active body,
+    .wf-robotoslab-n3-active body,
     .no-js body {
       font-size: 1.8em; } }
   @media only screen and (max-width: 480px) {
     body,
-    .wf-active body,
+    .wf-robotoslab-n3-active body,
     .no-js body {
       font-size: 1.6em; } }
 
@@ -239,12 +242,15 @@ a {
   transform: translate(-50%, -50%);
   margin: 0;
   padding: 4.6rem 6rem 3.8rem;
-  font: 400 2.6em/1.2 'Rye', serif;
+  font: bold 2.5em/1.2 Georgia, serif;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   text-align: center;
   color: #f5f5f5;
   background-color: #2e2d2c; }
+  .wf-rye-n4-active .main-title,
+  .no-js .main-title {
+    font: 400 2.6em/1.2 'Rye', Georgia, serif; }
   .main-title .main-title__line-1,
   .main-title .main-title__line-2 {
     white-space: nowrap; }
@@ -260,10 +266,14 @@ a {
       .main-title .main-title__line-2 {
         white-space: normal; } }
   @media only screen and (max-width: 860px) {
-    .main-title {
+    .main-title,
+    .wf-rye-n4-active .main-title,
+    .no-js .main-title {
       font-size: 2em; } }
   @media only screen and (max-width: 480px) {
-    .main-title {
+    .main-title,
+    .wf-rye-n4-active .main-title,
+    .no-js .main-title {
       font-size: 1.6em; } }
   .main-title .kerningfix1 {
     letter-spacing: -0.03em; }
@@ -286,7 +296,8 @@ a {
   color: #444;
   background-color: #ffce6f;
   box-shadow: none;
-  font: 700 1.2em 'Roboto Slab', sans-serif;
+  font-weight: 700;
+  font-size: 1.2em;
   text-transform: uppercase; }
 
 .nav-link:focus {
@@ -305,14 +316,19 @@ a {
 .section-heading {
   height: 100vh;
   margin: 0;
-  font: 400 8em/1.2 'Monoton', sans-serif;
+  font: bold 8em Tahoma, Geneva, Arial, sans-serif;
   line-height: 100vh;
   text-align: center;
   text-transform: uppercase;
   color: #a29487;
   background: url("bg-section.jpg") repeat; }
+  .wf-monoton-n4-active .section-heading,
+  .no-js .section-heading {
+    font: 400 8em/100vh 'Monoton', Tahoma, Geneva, Arial, sans-serif; }
   @media only screen and (max-width: 860px) {
-    .section-heading {
+    .section-heading,
+    .wf-monoton-n4-active .section-heading,
+    .no-js .section-heading {
       font-size: 18vw; } }
 
 .main-section {
@@ -344,14 +360,20 @@ a {
 
 .project-heading {
   margin: 0;
-  font: 900 3.6em/1.2 'Roboto', sans-serif;
+  font: bold 3.4em/1.2 Tahoma, Geneva, Arial, sans-serif;
   text-align: center;
   color: inherit; }
+  .wf-roboto-n3-active .project-heading,
+  .no-js .project-heading {
+    font: 900 3.6em/1.2 'Roboto', Tahoma, Geneva, Arial, sans-serif; }
 
 .project-desc {
-  font: 300 0.9em/1.2 'Roboto', sans-serif;
+  font: normal 0.9em/1.2 Tahoma, Geneva, Arial, sans-serif;
   text-align: center;
   text-transform: uppercase; }
+  .wf-roboto-n3-active .project-desc,
+  .no-js .project-desc {
+    font: 300 0.9em/1.2 'Roboto', Tahoma, Geneva, Arial, sans-serif; }
   .main-section__type-1 .project-desc {
     color: #fdbab7; }
   .main-section__type-2 .project-desc {

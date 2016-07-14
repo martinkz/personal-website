@@ -62,16 +62,22 @@ html { box-sizing: border-box; }
 html { font-size: 62.5%; }
 
 body {
-	font: 300 2rem/1.5 'Roboto Slab', Georgia, serif;
+	font: normal 2rem/1.5 Georgia, serif;
 	background-color: #e9e7e2;
 	// experimental
 	// scroll-snap-points-y: repeat(100%);
 	// scroll-snap-type: mandatory;
 	// scroll-snap-destination: 100% 0%;
 
+	@at-root 
+	.wf-robotoslab-n3-active &,
+	.no-js & {
+		font: 300 2rem/1.5 'Roboto Slab', Georgia, serif;
+	}
+
 	@media only screen and (max-width: $screen-lg) {
     	&,
-    	.wf-active &,
+    	.wf-robotoslab-n3-active &,
     	.no-js & {
 			font-size: 1.8em;
 		}
@@ -79,7 +85,7 @@ body {
 
 	@media only screen and (max-width: $screen-sm) {
 		&,
-    	.wf-active &,
+    	.wf-robotoslab-n3-active &,
     	.no-js & {
 			font-size: 1.6em;
 		}
@@ -131,7 +137,14 @@ a {
 	margin: 0;
 	padding: 4.6rem 6rem 3.8rem;
 
-	font: 400 2.6em/1.2 'Rye', serif;
+	font: bold 2.5em/1.2 Georgia, serif;
+
+	@at-root 
+	.wf-rye-n4-active &,
+	.no-js & {
+		font: 400 2.6em/1.2 'Rye', Georgia, serif;
+	}
+
 	text-transform: uppercase;
 	letter-spacing: 0.1rem;
 	text-align: center;
@@ -162,10 +175,18 @@ a {
 		}
 	}
 	@media only screen and (max-width: $screen-md) {
-		font-size: 2em;
+		&,
+    	.wf-rye-n4-active &,
+    	.no-js & {
+			font-size: 2em;
+		}
 	}
-		@media only screen and (max-width: $screen-sm) {
-		font-size: 1.6em;
+	@media only screen and (max-width: $screen-sm) {
+		&,
+    	.wf-rye-n4-active &,
+    	.no-js & {
+			font-size: 1.6em;
+		}
 	}
 
 	.kerningfix1 { letter-spacing: -0.03em; }
@@ -194,7 +215,8 @@ a {
 	color: #444;
 	background-color: $color-goldenrod;
 	box-shadow: none;
-	font: 700 1.2em 'Roboto Slab', sans-serif;
+	font-weight: 700;
+	font-size: 1.2em;
 	text-transform: uppercase;
 }
 
@@ -222,7 +244,14 @@ a {
 	height: 100vh;
 	margin: 0;
 
-	font: 400 8em/1.2 'Monoton', sans-serif;
+	font: bold 8em Tahoma, Geneva, Arial, sans-serif;
+
+	@at-root 
+	.wf-monoton-n4-active &,
+	.no-js & {
+		font: 400 8em/100vh 'Monoton', Tahoma, Geneva, Arial, sans-serif;
+	}
+
 	line-height: 100vh;
 	text-align: center;
 	text-transform: uppercase;
@@ -233,7 +262,11 @@ a {
 	background: url('bg-section.jpg') repeat;
 
 	@media only screen and (max-width: $screen-md) {
-		font-size: 18vw;
+		&,
+    	.wf-monoton-n4-active &,
+    	.no-js & {
+			font-size: 18vw;
+		}
 	}
 }
 
@@ -313,13 +346,27 @@ a {
 
 .project-heading {
 	margin: 0;
-	font: 900 3.6em/1.2 'Roboto', sans-serif;
+	font: bold 3.4em/1.2 Tahoma, Geneva, Arial, sans-serif;
+
+	@at-root 
+	.wf-roboto-n3-active &,
+	.no-js & {
+		font: 900 3.6em/1.2 'Roboto', Tahoma, Geneva, Arial, sans-serif;
+	}
+
 	text-align: center;
 	color: inherit;
 }
 
 .project-desc {
-	font: 300 0.9em/1.2 'Roboto', sans-serif;
+	font: normal 0.9em/1.2 Tahoma, Geneva, Arial, sans-serif;
+
+	@at-root 
+	.wf-roboto-n3-active &,
+	.no-js & {
+		font: 300 0.9em/1.2 'Roboto', Tahoma, Geneva, Arial, sans-serif;
+	}
+
 	text-align: center;
 	text-transform: uppercase;
 	
