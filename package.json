@@ -9,6 +9,6 @@
   "author": "Martin Kozhuharov",
   "license": "ISC",
   "devDependencies": {
-  }
+  },
   "comment": "This project uses global node modules"
 }
