@@ -431,7 +431,7 @@ a {
 
 
 .dialog[aria-hidden="true"] {
-	// display: none;
+	// Setting "visibility:hidden" on a parent element sets the same to all children
 	visibility: hidden;
 
 	.no-js & {
@@ -446,7 +446,8 @@ a {
 	bottom: 0;
 	right: 0;
 	z-index: 2;
-	transition: all 0.25s ease-in-out;
+	background-color: rgba(0, 0, 0, 0.66);
+	transition: opacity 0.25s ease-in-out;
 
 	.no-js & {
 		display: none;
@@ -459,21 +460,25 @@ a {
 	top: 0;
 	left: 0;
 	z-index: 10;
-	transform: translateY(-100%);
-	transition: all 0.25s ease-in-out;
-	// transition-delay: 0.2s;
+	// The visibility transition needs to complete in 0s, 
+	// otherwise focus()-ing on elements inside doesn't work
+	transition: visibility 0s ease-in-out,
+				transform 0.2s ease-in-out;
 
 	.no-js & {
 		position: static;
-		transform: translateY(0);
 	}
 }
 
-.dialog:not([aria-hidden="true"]) .dialog-content {
-	transform: translateY(0);
+.dialog[aria-hidden="true"] .dialog-content {
+	transform: translateY(-100%);
+	// The closing animation has a delay on visibility 
+	// so that the transform has time to play out
+	transition: transform 0.2s ease-in-out, 
+				visibility 0s ease-in-out 0.2s;
 }
-.dialog:not([aria-hidden="true"]) .dialog-overlay {
-	background-color: rgba(0, 0, 0, 0.66);
+.dialog[aria-hidden="true"] .dialog-overlay {
+	opacity: 0;
 }
 
 .dialog-close {
@@ -482,11 +487,17 @@ a {
 	right: 50%;
 	transform: translate(50%,-50%);
 	border: none;
-	background: #444;
+	background-color: #333;
 	color: white;
 	font-size: 3em;
 	padding: 0.5rem 4rem 1rem;
 	cursor: pointer;
+
+	&:hover,
+	&:active,
+	&:focus {
+		background-color: #5A3686;
+	}
 
 	@media only screen and (max-width: $screen-md) {
 		top: auto;

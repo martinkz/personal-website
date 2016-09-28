@@ -474,8 +474,9 @@ a {
   bottom: 0;
   right: 0;
   z-index: 2;
-  -webkit-transition: all 0.25s ease-in-out;
-  transition: all 0.25s ease-in-out; }
+  background-color: rgba(0, 0, 0, 0.66);
+  -webkit-transition: opacity 0.25s ease-in-out;
+  transition: opacity 0.25s ease-in-out; }
   .no-js .dialog-overlay {
     display: none; }
 
@@ -485,21 +486,23 @@ a {
   top: 0;
   left: 0;
   z-index: 10;
+  -webkit-transition: visibility 0s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  transition: visibility 0s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  transition: visibility 0s ease-in-out, transform 0.2s ease-in-out;
+  transition: visibility 0s ease-in-out, transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out; }
+  .no-js .dialog-content {
+    position: static; }
+
+.dialog[aria-hidden="true"] .dialog-content {
   -webkit-transform: translateY(-100%);
   transform: translateY(-100%);
-  -webkit-transition: all 0.25s ease-in-out;
-  transition: all 0.25s ease-in-out; }
-  .no-js .dialog-content {
-    position: static;
-    -webkit-transform: translateY(0);
-    transform: translateY(0); }
+  -webkit-transition: visibility 0s ease-in-out 0.2s,  -webkit-transform 0.2s ease-in-out;
+  transition: visibility 0s ease-in-out 0.2s,  -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out,  visibility 0s ease-in-out 0.2s;
+  transition: transform 0.2s ease-in-out,  visibility 0s ease-in-out 0.2s,  -webkit-transform 0.2s ease-in-out; }
 
-.dialog:not([aria-hidden="true"]) .dialog-content {
-  -webkit-transform: translateY(0);
-  transform: translateY(0); }
-
-.dialog:not([aria-hidden="true"]) .dialog-overlay {
-  background-color: rgba(0, 0, 0, 0.66); }
+.dialog[aria-hidden="true"] .dialog-overlay {
+  opacity: 0; }
 
 .dialog-close {
   position: absolute;
@@ -508,11 +511,13 @@ a {
   -webkit-transform: translate(50%, -50%);
   transform: translate(50%, -50%);
   border: none;
-  background: #444;
+  background-color: #333;
   color: white;
   font-size: 3em;
   padding: 0.5rem 4rem 1rem;
   cursor: pointer; }
+  .dialog-close:hover, .dialog-close:active, .dialog-close:focus {
+    background-color: #5A3686; }
   @media only screen and (max-width: 860px) {
     .dialog-close {
       top: auto; } }
