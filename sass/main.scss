@@ -1,5 +1,5 @@
 /* -------------------------------
-	 		 IMPORTS
+			 IMPORTS
 ------------------------------- */
 
 @import 'normalize';
@@ -29,13 +29,13 @@ html { box-sizing: border-box; }
 *, *:before, *:after { box-sizing: inherit; }
 
 ::-moz-selection {
-    background: #4C4746;
-    text-shadow: none;
+	background: #4C4746;
+	text-shadow: none;
 }
 
 ::selection {
-    background: #4C4746;
-    text-shadow: none;
+	background: #4C4746;
+	text-shadow: none;
 }
 
 html { font-size: 62.5%; }
@@ -55,17 +55,17 @@ body {
 	}
 
 	@media only screen and (max-width: $screen-lg) {
-    	&,
-    	.wf-robotoslab-n3-active &,
-    	.no-js & {
+		&,
+		.wf-robotoslab-n3-active &,
+		.no-js & {
 			font-size: 1.8em;
 		}
 	}
 
 	@media only screen and (max-width: $screen-sm) {
 		&,
-    	.wf-robotoslab-n3-active &,
-    	.no-js & {
+		.wf-robotoslab-n3-active &,
+		.no-js & {
 			font-size: 1.6em;
 		}
 	}
@@ -78,7 +78,7 @@ a {
 }
 
 /* -----------------------------
-	    FRONTPAGE STYLES
+		FRONTPAGE STYLES
 ----------------------------- */
 
 .wrap {
@@ -155,15 +155,15 @@ a {
 	}
 	@media only screen and (max-width: $screen-md) {
 		&,
-    	.wf-rye-n4-active &,
-    	.no-js & {
+		.wf-rye-n4-active &,
+		.no-js & {
 			font-size: 2em;
 		}
 	}
 	@media only screen and (max-width: $screen-sm) {
 		&,
-    	.wf-rye-n4-active &,
-    	.no-js & {
+		.wf-rye-n4-active &,
+		.no-js & {
 			font-size: 1.6em;
 		}
 	}
@@ -242,8 +242,8 @@ a {
 
 	@media only screen and (max-width: $screen-md) {
 		&,
-    	.wf-monoton-n4-active &,
-    	.no-js & {
+		.wf-monoton-n4-active &,
+		.no-js & {
 			font-size: 18vw;
 		}
 	}
@@ -376,7 +376,7 @@ a {
 	border-radius:  3px;
 	overflow: hidden;
 
-	& > img {
+	& img {
 		width: auto;
 		max-width: 100%;
 	}
@@ -424,6 +424,21 @@ a {
 	text-align:  left;
 	background: url('data:image/svg+xml;charset=utf-8,<svg version="1.1" id="Refresh_icon_1_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve"><g id="minimal-browser-refresh"><g><path fill-rule="evenodd" clip-rule="evenodd" fill="%23B3B3B3" d="M12.5,10.9l2.5-3h-1.7C13.2,4.6,10.7,2,7.7,2C4.5,2,2,4.7,2,8c0,3.3,2.5,6,5.7,6c1.3,0,2.5-0.5,3.5-1.3l-1-1.1c-0.7,0.5-1.6,0.9-2.5,0.9c-2.3,0-4.2-2-4.2-4.5s1.9-4.5,4.2-4.5c2.3,0,4.2,1.9,4.2,4.4h-2L12.5,10.9z"/></g></g></svg>') 8px 6px no-repeat,
 				#FFFFFF;
+}
+
+// Lazy loading classes
+
+.no-js .b-lazy {
+	display: none;
+}
+
+.b-lazy {
+	transition: opacity 0.2s ease-in-out;
+	opacity: 0;
+}
+
+.b-lazy.b-loaded {
+	opacity: 1;
 }
 
 
@@ -548,42 +563,42 @@ a {
    ========================================================================== */
 
 .hidden {
-    display: none !important;
+	display: none !important;
 }
 
 .visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
 }
 
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
+	clip: auto;
+	height: auto;
+	margin: 0;
+	overflow: visible;
+	position: static;
+	width: auto;
 }
 
 .invisible {
-    visibility: hidden;
+	visibility: hidden;
 }
 
 .clearfix:before,
 .clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+	content: " "; /* 1 */
+	display: table; /* 2 */
 }
 
 .clearfix:after {
-    clear: both;
+	clear: both;
 }
 
 /* ================
