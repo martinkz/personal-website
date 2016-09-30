@@ -185,11 +185,12 @@
 					var dialog = new window.A11yDialog(dialogEl, mainEl);
 
 					var menu_items = document.getElementsByClassName('nav-link');
-					[].forEach.call(menu_items, function (item) {
-						item.addEventListener('click', function(event) {
+					
+					for (var i = 0; i < menu_items.length; i++) {
+						menu_items[i].addEventListener('click', function(event) {
 							event.preventDefault();
 						});
-					});
+					};
 
 					var bLazy = new Blazy({
 						offset: 800
