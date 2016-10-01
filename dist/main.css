@@ -280,7 +280,7 @@ a {
 
 .main-nav {
   float: right;
-  margin-right: 4em;
+  margin-right: 6em;
   z-index: 11; }
   @media only screen and (max-width: 860px) {
     .main-nav {
@@ -300,6 +300,19 @@ a {
 
 .nav-link:focus {
   outline: 1px solid #f3b744; }
+
+.github-link {
+  position: absolute;
+  top: 0;
+  right: 0; }
+  .github-link svg {
+    fill: #2e2d2c;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0; }
+    .github-link svg:hover, .github-link svg:active, .github-link svg:focus {
+      fill: #5a3686; }
 
 .footnote {
   position: absolute;
@@ -530,7 +543,7 @@ a {
   padding: 0.5rem 4rem 1rem;
   cursor: pointer; }
   .dialog-close:hover, .dialog-close:active, .dialog-close:focus {
-    background-color: #5A3686;
+    background-color: #5a3686;
     outline: none; }
   @media only screen and (max-width: 860px) {
     .dialog-close {

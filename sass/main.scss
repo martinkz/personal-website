@@ -18,6 +18,7 @@ $screen-sm: 480px;
 $color-geraldine: #fa6f68;
 $color-goldenrod: #ffce6f;
 $color-flint: #84796b;
+$color-royalpurple: #5a3686;
 
 
 /* -----------------------------
@@ -177,7 +178,7 @@ a {
 	// top: 0;
 	float: right;
 	// right: 4em;
-	margin-right: 4em;
+	margin-right: 6em;
 	
 	z-index: 11;
 
@@ -200,6 +201,26 @@ a {
 }
 
 .nav-link:focus { outline: 1px solid #f3b744; }
+
+.github-link {
+	position: absolute;
+	top: 0;
+	right: 0;
+
+	& svg {
+		fill: #2e2d2c;
+		color: #fff;
+		position: absolute;
+		top: 0;
+		right: 0;
+
+		&:hover,
+		&:active,
+		&:focus {
+			fill: $color-royalpurple;
+		}
+	}
+}
 
 .footnote {
 	position: absolute;
@@ -513,7 +534,7 @@ a {
 	&:hover,
 	&:active,
 	&:focus {
-		background-color: #5A3686;
+		background-color: $color-royalpurple;
 		outline: none;
 	}
 
