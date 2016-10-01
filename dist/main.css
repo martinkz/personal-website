@@ -343,31 +343,43 @@ a {
       font-size: 18vw; } }
 
 .main-section {
-  padding: 3em 0 4em;
+  padding: 3em 0;
   position: relative; }
+  .curveDown + .main-section {
+    margin-top: -100px;
+    padding-top: 120px; }
+  .main-section + .curveDown {
+    position: relative;
+    z-index: 2;
+    background-color: transparent; }
   .main-section.main-section__type-1 {
     background-color: #fa6f68;
     color: white; }
+    .main-section.main-section__type-1 + .curveDown {
+      fill: #fa6f68; }
+    .main-section.main-section__type-1 + .curveDown .darkercurve {
+      fill: #da605a; }
   .main-section.main-section__type-2 {
     background-color: #ffce6f;
     color: #444; }
+    .main-section.main-section__type-2 + .curveDown {
+      fill: #ffce6f; }
+    .main-section.main-section__type-2 + .curveDown .darkercurve {
+      fill: #e5b14b; }
   .main-section.main-section__type-3 {
     background-color: #84796b;
     color: white; }
-  .main-section__type-1 + .curveDown {
-    fill: #fa6f68;
-    background-color: #ffce6f; }
-  .main-section__type-1 + .curveDown .darkercurve {
-    fill: #da605a; }
-  .main-section__type-2 + .curveDown {
-    fill: #ffce6f;
-    background-color: #84796b; }
-  .main-section__type-2 + .curveDown .darkercurve {
-    fill: #e5b14b; }
-  .main-section__type-3 + .curveDown {
-    fill: #84796b; }
-  .main-section__type-3 + .curveDown .darkercurve {
-    fill: #635f59; }
+    .main-section.main-section__type-3 + .curveDown {
+      fill: #84796b; }
+    .main-section.main-section__type-3 + .curveDown .darkercurve {
+      fill: #635f59; }
+  .main-section.main-section__type-4 {
+    background-color: #754b71;
+    color: white; }
+    .main-section.main-section__type-4 + .curveDown {
+      fill: #754b71; }
+    .main-section.main-section__type-4 + .curveDown .darkercurve {
+      fill: #523b50; }
 
 .project-heading {
   margin: 0;
