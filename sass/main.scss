@@ -19,6 +19,7 @@ $color-geraldine: #fa6f68;
 $color-goldenrod: #ffce6f;
 $color-flint: #84796b;
 $color-eggplant: #754b71;
+$color-flushmahogany: #ff676e;
 
 $color-royalpurple: #5a3686;
 
@@ -33,11 +34,13 @@ html { box-sizing: border-box; }
 
 ::-moz-selection {
 	background: #4C4746;
+	color: white;
 	text-shadow: none;
 }
 
 ::selection {
 	background: #4C4746;
+	color: white;
 	text-shadow: none;
 }
 
@@ -332,7 +335,18 @@ a {
 			fill: $color-eggplant; 
 		}
 		& + .curveDown .darkercurve {
-			fill: desaturate(darken($color-eggplant, 10%), 5%);
+			fill: desaturate(darken($color-eggplant, 8%), 3%);
+		}
+	}
+	&.main-section__type-5 {
+		background-color: $color-flushmahogany;
+		color: #222;
+
+		& + .curveDown { 
+			fill: $color-flushmahogany; 
+		}
+		& + .curveDown .darkercurve {
+			fill: desaturate(darken($color-flushmahogany, 10%), 5%);
 		}
 	}
 }

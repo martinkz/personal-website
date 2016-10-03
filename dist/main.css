@@ -177,10 +177,12 @@ html {
 
 ::-moz-selection {
   background: #4C4746;
+  color: white;
   text-shadow: none; }
 
 ::selection {
   background: #4C4746;
+  color: white;
   text-shadow: none; }
 
 html {
@@ -379,7 +381,14 @@ a {
     .main-section.main-section__type-4 + .curveDown {
       fill: #754b71; }
     .main-section.main-section__type-4 + .curveDown .darkercurve {
-      fill: #523b50; }
+      fill: #5a3d57; }
+  .main-section.main-section__type-5 {
+    background-color: #ff676e;
+    color: #222; }
+    .main-section.main-section__type-5 + .curveDown {
+      fill: #ff676e; }
+    .main-section.main-section__type-5 + .curveDown .darkercurve {
+      fill: #fa3942; }
 
 .project-heading {
   margin: 0;
