@@ -190,7 +190,7 @@ html {
 
 body {
   font: normal 2rem/1.5 Georgia, serif;
-  background-color: #e9e7e2; }
+  background-color: #353430; }
   .wf-robotoslab-n3-active body,
   .no-js body {
     font: 300 2rem/1.5 'Roboto Slab', Georgia, serif; }
@@ -367,7 +367,7 @@ a {
     .main-section.main-section__type-2 + .curveDown {
       fill: #ffce6f; }
     .main-section.main-section__type-2 + .curveDown .darkercurve {
-      fill: #e5b14b; }
+      fill: #deaf53; }
   .main-section.main-section__type-3 {
     background-color: #84796b;
     color: white; }
@@ -383,12 +383,19 @@ a {
     .main-section.main-section__type-4 + .curveDown .darkercurve {
       fill: #5a3d57; }
   .main-section.main-section__type-5 {
-    background-color: #ff676e;
-    color: #222; }
+    background-color: #d6c8b6;
+    color: #333; }
     .main-section.main-section__type-5 + .curveDown {
-      fill: #ff676e; }
+      fill: #d6c8b6; }
     .main-section.main-section__type-5 + .curveDown .darkercurve {
-      fill: #fa3942; }
+      fill: #c0af99; }
+  .main-section.main-section__type-6 {
+    background-color: #e66167;
+    color: #fff; }
+    .main-section.main-section__type-6 + .curveDown {
+      fill: #e66167; }
+    .main-section.main-section__type-6 + .curveDown .darkercurve {
+      fill: #c84c52; }
 
 .project-heading {
   margin: 0;
