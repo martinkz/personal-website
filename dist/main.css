@@ -274,7 +274,7 @@ a {
     .main-title,
     .wf-rye-n4-active .main-title,
     .no-js .main-title {
-      font-size: 1.6em; } }
+      font-size: 1.5em; } }
   .main-title .kerningfix1 {
     letter-spacing: -0.03em; }
   .main-title .kerningfix2 {
@@ -345,11 +345,11 @@ a {
       font-size: 18vw; } }
 
 .main-section {
-  padding: 3em 0;
+  padding: 3em 0 5em;
   position: relative; }
   .curveDown + .main-section {
     margin-top: -100px;
-    padding-top: 120px; }
+    padding-top: 8em; }
   .main-section + .curveDown {
     position: relative;
     z-index: 2;
@@ -391,7 +391,7 @@ a {
       fill: #c0af99; }
   .main-section.main-section__type-6 {
     background-color: #e66167;
-    color: #fff; }
+    color: white; }
     .main-section.main-section__type-6 + .curveDown {
       fill: #e66167; }
     .main-section.main-section__type-6 + .curveDown .darkercurve {
@@ -405,6 +405,10 @@ a {
   .wf-roboto-n3-active .project-heading,
   .no-js .project-heading {
     font: 900 3.6em/1.2 'Roboto', Tahoma, Geneva, Arial, sans-serif; }
+  @media only screen and (max-width: 480px) {
+    .wf-roboto-n3-active .project-heading,
+    .no-js .project-heading {
+      font-size: 2.8em; } }
 
 .project-desc {
   font: normal 0.9em/1.2 Tahoma, Geneva, Arial, sans-serif;
@@ -416,9 +420,15 @@ a {
   .main-section__type-1 .project-desc {
     color: #fdbab7; }
   .main-section__type-2 .project-desc {
-    color: #cb9733; }
+    color: #c29847; }
   .main-section__type-3 .project-desc {
     color: #bfb8b0; }
+  .main-section__type-4 .project-desc {
+    color: #c9aac6; }
+  .main-section__type-5 .project-desc {
+    color: #a19172; }
+  .main-section__type-6 .project-desc {
+    color: #f5bdc0; }
 
 .link-btn {
   display: inline-block;

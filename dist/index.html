@@ -184,7 +184,7 @@
 
 				<article class="main-section main-section__type-3">
 					<div class="wrap">
-						<h3 class="project-heading">Door of Hope</h3>
+						<h3 class="project-heading">Door of Hope<br>International</h3>
 						<p class="project-desc">2016 · Design · Front-End Development · Wordpress Theme</p>
 						<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.</p>
 						<p class="weblink"><a class="link-btn" href="http://dohi.org" target="_blank">Website</a></p>
@@ -212,7 +212,7 @@
 
 				<article class="main-section main-section__type-5">
 					<div class="wrap">
-						<h3 class="project-heading">Nexus Café and Bar</h3>
+						<h3 class="project-heading">Nexus<br>Café &amp; Bar</h3>
 						<p class="project-desc">2016 · Design · Front-End Development</p>
 
 						<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Ipsum passage, and going through the cites of the word in classical </p>
@@ -243,12 +243,10 @@
 			</main>
 		</div>
 
-		<div class="dialog" aria-hidden="true" id="contact-dialog">
+		<div class="dialog" id="contact-dialog">
 			<div class="dialog-overlay" tabindex="-1" data-a11y-dialog-hide></div>
 			<div class="dialog-content" role="dialog">
 				<div class="about-dialog clearfix" role="document">
-					<!-- <h1 id="dialogTitle">About and Contact Info</h1>
-					<p id="dialogDescription">Fill in the ridiculously small ridiculously cool newsletter!</p> -->
 					<article class="grid-half">
 						<h3 class="project-heading">About</h3>
 						<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur</p>
@@ -280,6 +278,8 @@
 					var dialogEl = document.getElementById('contact-dialog');
 					var mainEl = document.getElementById('js-nondialog-content');
 					var dialog = new window.A11yDialog(dialogEl, mainEl);
+
+					dialogEl.setAttribute('aria-hidden', 'true');
 
 					var menu_items = document.getElementsByClassName('nav-link');
 					

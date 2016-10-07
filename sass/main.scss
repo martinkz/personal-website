@@ -171,7 +171,7 @@ a {
 		&,
 		.wf-rye-n4-active &,
 		.no-js & {
-			font-size: 1.6em;
+			font-size: 1.5em;
 		}
 	}
 
@@ -277,13 +277,13 @@ a {
 }
 
 .main-section {
-	padding: 3em 0;
+	padding: 3em 0 5em;
 	position: relative;
 
 
 	.curveDown + & {
 		margin-top: -100px;
-		padding-top: 120px;
+		padding-top: 8em;
 	}
 
 	& + .curveDown {
@@ -352,7 +352,7 @@ a {
 	}
 	&.main-section__type-6 {
 		background-color: $color-roman;
-		color: #fff;
+		color: white;
 
 		& + .curveDown { 
 			fill: $color-roman; 
@@ -366,6 +366,8 @@ a {
 .project-heading {
 	margin: 0;
 	font: bold 3.4em/1.2 Tahoma, Geneva, Arial, sans-serif;
+	text-align: center;
+	color: inherit;
 
 	@at-root 
 	.wf-roboto-n3-active &,
@@ -373,8 +375,12 @@ a {
 		font: 900 3.6em/1.2 'Roboto', Tahoma, Geneva, Arial, sans-serif;
 	}
 
-	text-align: center;
-	color: inherit;
+	@media only screen and (max-width: $screen-sm) {
+		.wf-roboto-n3-active &,
+		.no-js & {
+			font-size: 2.8em;
+		}
+	}
 }
 
 .project-desc {
@@ -393,10 +399,19 @@ a {
 		color: lighten($color-geraldine, 16%);
 	}
 	.main-section__type-2 & {
-		color: desaturate(darken($color-goldenrod, 22%), 40%);
+		color: desaturate(darken($color-goldenrod, 20%), 50%);
 	}
 	.main-section__type-3 & {
 		color: lighten($color-flint, 25%);
+	}
+	.main-section__type-4 & {
+		color: lighten($color-eggplant, 35%);
+	}
+	.main-section__type-5 & {
+		color: desaturate(darken($color-goldenrod, 18%), 80%);
+	}
+	.main-section__type-6 & {
+		color: lighten($color-roman, 21%);
 	}
 }
 
