@@ -19,3 +19,7 @@ fieldset {
 }
 
 textarea { resize: vertical; }
+
+h1:focus,
+h2:focus,
+h3:focus { outline: none; }

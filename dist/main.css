@@ -163,6 +163,11 @@ fieldset {
 textarea {
   resize: vertical; }
 
+h1:focus,
+h2:focus,
+h3:focus {
+  outline: none; }
+
 /* -------------------------------
 	  VARIABLES & SETTINGS
 ------------------------------- */
@@ -208,7 +213,11 @@ body {
 a {
   color: inherit;
   text-decoration: none;
-  box-shadow: inset 0 -2px 0 0 currentColor; }
+  box-shadow: inset 0 -1px 0 0 #444; }
+
+a:hover, a:active, a:focus {
+  box-shadow: inset 0 -4px 0 0 rgba(0, 0, 0, 0.4);
+  outline: none; }
 
 /* -----------------------------
 		FRONTPAGE STYLES
@@ -299,6 +308,11 @@ a {
   font-weight: 700;
   font-size: 1.2em;
   text-transform: uppercase; }
+
+.nav-link:hover,
+.nav-link:active,
+.nav-link:focus {
+  box-shadow: none; }
 
 .nav-link:focus {
   outline: 1px solid #f3b744; }
@@ -590,6 +604,9 @@ a {
     display: none; }
 
 .about-dialog {
+  background-color: #fa6f68; }
+
+.about-box {
   background-color: #ffce6f; }
 
 .contact-box {
