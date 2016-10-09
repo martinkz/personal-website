@@ -553,6 +553,10 @@ a:hover, a:active, a:focus {
   background-color: rgba(0, 0, 0, 0.66);
   -webkit-transition: opacity 0.25s ease-in-out;
   transition: opacity 0.25s ease-in-out; }
+  .dialog[aria-hidden="true"] .dialog-overlay {
+    opacity: 0;
+    -webkit-transition: opacity 0.25s ease-in-out, visibility 0s ease-in-out 0.25s;
+    transition: opacity 0.25s ease-in-out, visibility 0s ease-in-out 0.25s; }
   .no-js .dialog-overlay {
     display: none; }
 
@@ -566,21 +570,20 @@ a:hover, a:active, a:focus {
   transition: visibility 0s ease-in-out, -webkit-transform 0.2s ease-in-out;
   transition: visibility 0s ease-in-out, transform 0.2s ease-in-out;
   transition: visibility 0s ease-in-out, transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out; }
+  .dialog[aria-hidden="true"] .dialog-content {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+    -webkit-transition: visibility 0s ease-in-out 0.2s,  -webkit-transform 0.2s ease-in-out;
+    transition: visibility 0s ease-in-out 0.2s,  -webkit-transform 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out,  visibility 0s ease-in-out 0.2s;
+    transition: transform 0.2s ease-in-out,  visibility 0s ease-in-out 0.2s,  -webkit-transform 0.2s ease-in-out; }
   .no-js .dialog-content {
     position: static; }
-
-.dialog[aria-hidden="true"] .dialog-content {
-  -webkit-transform: translateY(-100%);
-  transform: translateY(-100%);
-  -webkit-transition: visibility 0s ease-in-out 0.2s,  -webkit-transform 0.2s ease-in-out;
-  transition: visibility 0s ease-in-out 0.2s,  -webkit-transform 0.2s ease-in-out;
-  transition: transform 0.2s ease-in-out,  visibility 0s ease-in-out 0.2s;
-  transition: transform 0.2s ease-in-out,  visibility 0s ease-in-out 0.2s,  -webkit-transform 0.2s ease-in-out; }
-
-.dialog[aria-hidden="true"] .dialog-overlay {
-  opacity: 0;
-  -webkit-transition: opacity 0.25s ease-in-out, visibility 0s ease-in-out 0.25s;
-  transition: opacity 0.25s ease-in-out, visibility 0s ease-in-out 0.25s; }
+  .no-js .dialog[aria-hidden="true"] .dialog-content {
+    -webkit-transform: none;
+    transform: none;
+    -webkit-transition: none;
+    transition: none; }
 
 .dialog-close {
   position: absolute;

@@ -564,6 +564,12 @@ a:hover, a:active, a:focus {
 	background-color: rgba(0, 0, 0, 0.66);
 	transition: opacity 0.25s ease-in-out;
 
+	.dialog[aria-hidden="true"] & {
+		opacity: 0;
+		transition: opacity 0.25s ease-in-out,
+					visibility 0s ease-in-out 0.25s;
+	}
+
 	.no-js & {
 		display: none;
 	}
@@ -580,22 +586,22 @@ a:hover, a:active, a:focus {
 	transition: visibility 0s ease-in-out,
 				transform 0.2s ease-in-out;
 
-	.no-js & {
-		position: static;
+	.dialog[aria-hidden="true"] & {
+		transform: translateY(-100%);
+		// The closing animation has a delay on visibility 
+		// so that the transform has time to play out
+		transition: transform 0.2s ease-in-out, 
+					visibility 0s ease-in-out 0.2s;
 	}
-}
 
-.dialog[aria-hidden="true"] .dialog-content {
-	transform: translateY(-100%);
-	// The closing animation has a delay on visibility 
-	// so that the transform has time to play out
-	transition: transform 0.2s ease-in-out, 
-				visibility 0s ease-in-out 0.2s;
-}
-.dialog[aria-hidden="true"] .dialog-overlay {
-	opacity: 0;
-	transition: opacity 0.25s ease-in-out,
-				visibility 0s ease-in-out 0.25s;
+	.no-js & { 
+		position: static; 
+	}
+
+	.no-js .dialog[aria-hidden="true"] & {
+		transform: none;
+		transition: none;
+	}
 }
 
 .dialog-close {

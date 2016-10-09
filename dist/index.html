@@ -241,7 +241,7 @@
 			</main>
 		</div>
 
-		<div class="dialog" id="contact-dialog">
+		<div class="dialog" id="contact-dialog" aria-hidden="true">
 			<div class="dialog-overlay" tabindex="-1" data-a11y-dialog-hide></div>
 			<div class="dialog-content" role="dialog">
 				<div class="about-dialog clearfix" role="document">
@@ -285,8 +285,6 @@
 					var dialogEl = document.getElementById('contact-dialog');
 					var mainEl = document.getElementById('js-nondialog-content');
 					var dialog = new window.A11yDialog(dialogEl, mainEl);
-
-					dialogEl.setAttribute('aria-hidden', 'true');
 
 					var menu_items = document.getElementsByClassName('nav-link');
 					
