@@ -1,5 +1,5 @@
 [[redirects]]
   from = "/photo/*"
-  to = "https://photo.martinkz.uk/"
+  to = "https://photo.martinkz.uk/:splat"
   status = 200
   force = false
