@@ -3,4 +3,3 @@
   to = "https://photo.martinkz.uk/"
   status = 200
   force = false
-  headers = {X-From = "Netlify"}
