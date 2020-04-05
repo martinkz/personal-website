@@ -2,5 +2,5 @@
   from = "/photo/*"
   to = "https://photo.martinkz.uk/"
   status = 200
-  force = true
+  force = false
   headers = {X-From = "Netlify"}
