@@ -1,0 +1,6 @@
+[[redirects]]
+  from = "/photo"
+  to = "https://photo.martinkz.uk/"
+  status = 200
+  force = true
+  headers = {X-From = "Netlify"}
